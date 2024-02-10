@@ -1,0 +1,133 @@
+@import '../../../styles.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+
+    .hotel-res {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 50px;
+        }
+
+        span {
+            font-size: 30px;
+            font-family: $poppins;
+            font-weight: 500;
+        }
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+
+        nav {
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none;
+                gap: 50px;
+
+                li {
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 22px;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .user {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -600px; 
+            height: 100%;
+            width: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease; 
+            z-index: 1000;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px 10px;
+        
+            span {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        
+            .form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+        
+                    input {
+                        padding: 12px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        
+        .open {
+            right: 0; 
+        }
+        
+        .close-button {
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        
+            i {
+                font-size: 24px;
+                color: #333;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 764px) {
+    header {
+        .navbar {
+            display: none;
+        }
+    }
+}
