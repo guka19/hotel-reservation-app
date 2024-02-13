@@ -1,0 +1,140 @@
+@import '../../../styles.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+
+    span {
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: 3px solid $primary;
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .city-select {
+                background-color: transparent;
+                outline: none;
+                border: none;
+                border-right: 1px solid gray;
+                font-size: 16px;
+                font-family: $poppins;
+                font-weight: 400;
+                cursor: pointer;
+            }
+
+            .title-input {
+                display: flex;
+                padding: 12px 18px;
+                font-size: 16px;
+                background-color: transparent;
+                outline: none;
+                border: none;
+            }
+
+            .type-select {
+                background-color: transparent;
+                outline: none;
+                border: none;
+                border-left: 1px solid gray;
+                font-size: 16px;
+                font-family: $poppins;
+                font-weight: 400;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .search-container {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 664px) {
+    .search-container {
+        
+        .search {
+
+            form {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                .city-select {
+                    border-right: none;
+                    border-bottom: 1px solid black;
+                }
+
+                .title-input {
+                    border: 1px solid black;
+                    border-radius: 10px;
+                }
+                
+                .type-select {
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+    .slider-container {
+        width: 1000px;
+        height: 400px;
+    }
+
+
+@media only screen and (max-width: 1020px) {
+    .slider-container {
+        width: 800px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 764px) {
+    .slider-container {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .slider-container {
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .slider-container {
+        width: 300px;
+        height: 200px;
+    }
+}

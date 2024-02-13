@@ -4,21 +4,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    padding: 10px 50px;
+    border-bottom: 1px solid black;
 
     .hotel-res {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        img {
-            width: 50px;
-        }
+        a {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        span {
-            font-size: 30px;
-            font-family: $poppins;
-            font-weight: 500;
+            img {
+                width: 50px;
+            }
+    
+            span {
+                font-size: 30px;
+                font-family: $poppins;
+                font-weight: 500;
+                color: black;
+            }
         }
     }
 
@@ -38,11 +47,19 @@ header {
                 gap: 50px;
 
                 li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    i {
+                        color: $primary;
+                    }
 
                     a {
                         text-decoration: none;
                         color: black;
-                        font-size: 22px;
+                        font-size: 20px;
                         transition: all 0.2s ease;
 
                         &:hover {
@@ -58,6 +75,29 @@ header {
             justify-content: center;
             align-items: center;
             gap: 10px;
+
+            .language {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 3px;
+
+                button {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    &.active {
+                        border-bottom: 2px solid $primary;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .burger {
+            display: none;
         }
 
         .sidebar {
@@ -124,10 +164,54 @@ header {
     }
 }
 
-@media only screen and (max-width: 764px) {
+@media only screen and (max-width: 876px) {
     header {
+        padding: 30px 30px;
+
         .navbar {
-            display: none;
+            
+            nav {
+                display: none;
+            }
+
+            .user {
+                display: none;
+            }
+
+            .burger {
+                 display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    header {
+
+        .navbar {
+
+            nav {
+                
+                ul {
+
+                    li {
+
+                        a {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1194px) {
+    header {
+
+        .navbar {
+            gap: 50px;
         }
     }
 }

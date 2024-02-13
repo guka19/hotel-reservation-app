@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="search-container">
+        <span> {{ "search-dev" | translate }} &#x2192; </span>
+        <section class="search">
+            <form [formGroup]="searchForm">
+                    <select formControlName="city" class="city-select">
+                        <option value="" disabled selected> {{ "cityselect" | translate }} </option>
+                        <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+                    </select>
+                    <input type="text" formControlName="title" placeholder="Search ..." class="title-input">
+                <select formControlName="city" class="type-select">
+                    <option value="" disabled selected> {{ "realestatetype" | translate }} </option>
+                    <option [value]=" 'apartment' | translate "> {{ "apartment" | translate }} </option>
+                    <option [value]=" 'housingandcot' | translate "> {{ "housingandcot" | translate }} </option>
+                    <option [value]=" 'comercial' | translate "> {{ "comercial" | translate }} </option>
+                    <option [value]=" 'hotels' | translate "> {{ "hotels" | translate }} </option>
+                </select>
+            </form>
+        </section>
+        <p-button [label]=" 'search' | translate " severity="help" icon="pi pi-search"></p-button>
+    </div>
+    <div class="slider-container">
+        <app-image-slider [images]="images"></app-image-slider>
+    </div>
+</div>

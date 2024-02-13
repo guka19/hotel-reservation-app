@@ -1,0 +1,18 @@
+<div class="burger-menu" [class.active]="isMenuOpen" (click)="toggleMenu()">
+  <img class="burger-icon" src="assets/burger/menu.svg" alt="menu">
+  <ul class="menu-items" [ngClass]="{ 'active': isMenuOpen }">
+      <li><a routerLink=""><i class="pi pi-building"></i> {{ 'hotels' | translate }} </a></li>
+      <li><a routerLink="/offers"><i class="pi pi-heart"></i>  {{ 'favorites' | translate }} </a></li>
+      <li><a routerLink="/about"><i class="pi pi-question-circle"></i> {{ 'about' | translate }} </a></li>
+      <div class="line"></div>
+      <li class="user">
+          <p-button icon="pi pi-user" [label]="'user' | translate" severity="help"></p-button>
+      </li>
+      <li>
+        <div class="language">
+          <button [class.active]="activeLanguage === 'en'" (click)="switchLanguage('en')">EN</button>
+          <button [class.active]="activeLanguage === 'ge'" (click)="switchLanguage('ge')">GE</button>
+        </div> 
+      </li>
+  </ul>
+</div>
