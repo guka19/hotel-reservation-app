@@ -1,0 +1,70 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "name": "Luxury Hotel",
+        "location": "City Center",
+        "pricePerNight": 200,
+        "capacity": 2,
+        "amenities": ["Spa", "Gym", "Restaurant"],
+        "photos": ["https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/161758/governor-s-mansion-montgomery-alabama-grand-staircase-161758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
+        "vip": true,
+        "type": "hotel",
+        "rating": 4.5,
+        "rooms": 100,
+        "availableRooms": 50,
+        "hasPool": true,
+        "bedRoom": 1,
+        "squareMeter": 50
+      },
+      {
+        "id": 2,
+        "name": "Cozy Cottage",
+        "location": "Countryside",
+        "pricePerNight": 100,
+        "capacity": 4,
+        "amenities": ["Fireplace", "Garden", "BBQ"],
+        "photos": ["https://images.pexels.com/photos/42152/pexels-photo-42152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/553575/pexels-photo-553575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/92873/pexels-photo-92873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
+        "vip": false,
+        "type": "cottage",
+        "hasGarden": true,
+        "rooms": 6,
+        "hasFireplace": true,
+        "isPetFriendly": true,
+        "bedRoom": 3,
+        "squareMeter": 100
+      },
+      {
+        "id": 3,
+        "name": "Downtown Apartment",
+        "location": "Downtown",
+        "pricePerNight": 150,
+        "capacity": 3,
+        "amenities": ["Balcony", "Kitchen", "Parking"],
+        "photos": ["https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
+        "vip": true,
+        "type": "apartment",
+        "rooms": 2,
+        "hasKitchen": true,
+        "floorNumber": 5,
+        "bedRoom": 2,
+        "squareMeter": 80
+      },
+      {
+        "id": 4,
+        "name": "Commercial Office Space",
+        "location": "Business District",
+        "pricePerNight": 0,
+        "capacity": 50,
+        "amenities": ["Conference Room", "Workspace", "High-speed Internet"],
+        "photos": ["https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
+        "vip": false,
+        "type": "commercial",
+        "commercialType": "Office",
+        "areaInSquareFeet": 5000,
+        "hasParking": true,
+        "squareMeter": 300
+      }
+    ]
+  }
+  

@@ -1,0 +1,75 @@
+@import '../../../styles.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    height: 450px;
+    border: 0.08rem rgb(155, 154, 154) solid;
+    border-radius: 20px;
+
+    .image {
+        width: 100%;
+        height: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 10px;
+        gap: 10px;
+
+        .title {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .main-parts {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .currency {
+                display: flex;
+                align-items: center;
+                border-radius: 20px;
+                border: 0.06rem gray solid;
+
+                .currency-button {
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-radius: 20px;
+                    font-size: 16px;
+                    cursor: pointer;
+
+                    &.active {
+                        background-color: $primary;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .amenities {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            .amenity{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

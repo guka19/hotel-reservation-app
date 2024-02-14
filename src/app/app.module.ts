@@ -5,7 +5,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
 
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -18,6 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BurgerComponent } from './components/burger/burger.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ImageSliderComponent } from './components/image-slider/image-slider.component';
+import { PropertyCardComponent } from './components/property-card/property-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { ImageSliderComponent } from './components/image-slider/image-slider.com
     HeaderComponent,
     BurgerComponent,
     HomeComponent,
-    ImageSliderComponent
+    ImageSliderComponent,
+    PropertyCardComponent
   ],
   imports: [
     BrowserModule,
