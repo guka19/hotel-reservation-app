@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Slide } from 'src/app/components/image-slider/image-slider.component';
+import { AllListing } from 'src/app/shared/models/all-listing';
+import { PropertyService } from 'src/app/shared/services/property.service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,8 @@ import { Slide } from 'src/app/components/image-slider/image-slider.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  vipProperties: AllListing[] = [];
 
   cities: string[] = ["Tbilisi", "Batumi", "Borjomi", "Qutaisi", "Bakuriani", "Gudauri", "Borjomi", "Gori", "Zugdidi", "Telavi", "Yazbegi", "Svaneti"];
 
@@ -35,6 +39,10 @@ export class HomeComponent {
     title: [""]
   })
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private propertyService: PropertyService) {
+    this.propertyService.getVipProperties().subscribe(data => {
+      this.vipProperties = data;
+    })
+  }
 
 }

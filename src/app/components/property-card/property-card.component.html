@@ -1,12 +1,13 @@
 <div class="card">
     <div class="image">
-        <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="hotel">
+        <img [src]="property.photos[0]" alt="hotel">
+        <div class="vip-logo" *ngIf="property.vip">VIP</div>
     </div>
     <div class="info">
-        <span class="title"> ქირავდება ახალი აშენებული ბინა საბურთალოზე</span>
+        <span class="title"> {{ property.name }} </span>
         <div class="main-parts">
-            <span class="price" *ngIf="currency === 'gel' ">{{price}}</span>
-            <span class="price" *ngIf="currency === 'usd' ">{{priceInUsd.toFixed(2)}}</span>
+            <span class="price" *ngIf="currency === 'gel' ">{{property.pricePerNight}}</span>
+            <span class="price" *ngIf="currency === 'usd' ">{{(property.pricePerNight / 2.7).toFixed(2)}}</span>
             <div class="currency">
                 <button class="currency-button" [ngClass]="{ 'active': currency === 'usd' }" (click)="changetoUsd()">$</button>
                 <button class="currency-button" [ngClass]="{ 'active': currency === 'gel' }" (click)="changeToGel()">₾</button>
@@ -14,11 +15,11 @@
         </div>
         <div class="amenities">
             <div class="amenity">
-                <p>7</p>
+                <p>{{property.floorNumber}}</p>
                 <span class="material-symbols-outlined">floor</span>
             </div>
             <div class="amenity">
-                <p>2</p>
+                <p>{{property.bedRoom}}</p>
                 <span class="material-symbols-outlined">bed</span>
             </div>
             <div class="amenity">
@@ -26,10 +27,10 @@
                 <span class="material-symbols-outlined">door_front</span>
             </div>
             <div class="amenity">
-                <p>67{{ 'm2' | translate }} </p>
+                <p> {{property.squareMeter}} {{ 'm2' | translate }} </p>
                 <span class="material-symbols-outlined">check_box_outline_blank</span>
             </div>
         </div>
-        <p>დიმ.ბაქრაძის ქ.</p>
+        <p>{{property.location}}</p>
     </div>
 </div>

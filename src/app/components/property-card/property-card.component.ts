@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { AllListing } from 'src/app/shared/models/all-listing';
 
 @Component({
   selector: 'app-property-card',
@@ -12,15 +13,13 @@ export class PropertyCardComponent {
 
     currency = "gel";
 
-    price = 830;
+    @Input() property!: AllListing;
 
-    priceInUsd = 830 / 2.70;
+    changetoUsd() {
+      this.currency = "usd";
+    }
 
-  changetoUsd() {
-    this.currency = "usd";
-  }
-
-  changeToGel() {
-    this.currency = "gel";
-  }
+    changeToGel() {
+      this.currency = "gel";
+    }
 }

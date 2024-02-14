@@ -1,4 +1,4 @@
-interface Property {
+export interface Property {
     id: number;
     name: string;
     location: string;
@@ -13,7 +13,7 @@ interface Property {
     squareMeter: number; 
 }
 
-interface Apartment extends Property {
+export interface Apartment extends Property {
     hasKitchen: boolean;
     floorNumber: number;
 }
@@ -26,13 +26,13 @@ interface Hotel extends Property {
 }
 
 
-interface Cottage extends Property {
+export interface Cottage extends Property {
     hasGarden: boolean;
     hasFireplace: boolean;
     isPetFriendly: boolean;
 }
   
-interface CommercialSpace extends Property {
+export interface CommercialSpace extends Property {
     commercialType: string; 
     areaInSquareFeet: number;
     hasParking: boolean;

@@ -26,11 +26,6 @@
 <div class="vip-listings">
     <span> <i class="pi pi-verified"></i> {{ 'vip' | translate }} </span>
         <div class="card-container">
-            <app-property-card></app-property-card>
-            <app-property-card></app-property-card>
-            <app-property-card></app-property-card>
-            <app-property-card></app-property-card>
-            <app-property-card></app-property-card>
-            <app-property-card></app-property-card>
+            <app-property-card *ngFor="let property of vipProperties" [property]="property"></app-property-card>
         </div>
 </div>

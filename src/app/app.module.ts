@@ -10,6 +10,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { DividerModule } from 'primeng/divider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +39,7 @@ import { PropertyCardComponent } from './components/property-card/property-card.
     CheckboxModule,
     RadioButtonModule,
     HammerModule,
+    DividerModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
