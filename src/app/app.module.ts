@@ -22,6 +22,10 @@ import { ImageSliderComponent } from './components/image-slider/image-slider.com
 import { PropertyCardComponent } from './components/property-card/property-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PropertyPageComponent } from './pages/property-page/property-page.component';
+import { OwnerRegisterComponent } from './pages/owner/owner-register/owner-register.component';
+import { UserRegisterComponent } from './pages/user/user-register/user-register.component';
+import { UserLoginComponent } from './pages/user/user-login/user-login.component';
+import { DefaultRegisterComponent } from './pages/default-register/default-register.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { PropertyPageComponent } from './pages/property-page/property-page.compo
     ImageSliderComponent,
     PropertyCardComponent,
     FooterComponent,
-    PropertyPageComponent
+    PropertyPageComponent,
+    OwnerRegisterComponent,
+    UserRegisterComponent,
+    UserLoginComponent,
+    DefaultRegisterComponent,
   ],
   imports: [
     BrowserModule,

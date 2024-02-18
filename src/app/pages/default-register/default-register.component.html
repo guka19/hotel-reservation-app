@@ -1,0 +1,15 @@
+<div class="container">
+    <span> {{ 'chooseform' | translate }} </span>
+    <div class="buttons">
+        <div class="user user-client">
+            <a routerLink="/user-register">
+                <p-button [label]=" 'regasuser' | translate " severity="help"></p-button>
+            </a>
+        </div>
+        <div class="user user-customer">
+            <a routerLink="/renter-register">
+                <p-button [label]=" 'regasrenter' | translate " severity="help" [text]="true"></p-button>
+            </a>
+        </div>
+    </div>
+</div>

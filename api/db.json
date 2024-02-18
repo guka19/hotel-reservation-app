@@ -126,6 +126,115 @@
       "squareMeter": 300,
       "userName": "Ilarion Mtiuli",
       "userId": "c8d2e1a3-6f4b-4819-9f4c-3a792b3f8f1e"
+    },
+    {
+      "id": 5,
+      "name": "Apartments",
+      "location": "City Center",
+      "pricePerNight": 225,
+      "capacity": 2,
+      "amenities": {
+        "gym": false,
+        "restaurant": true,
+        "pool": true,
+        "balcony": false,
+        "kitchen": true,
+        "parking": true,
+        "gas": true,
+        "television": true,
+        "internet": true,
+        "hotWater": true
+      },
+      "photos": [
+        "https://images.pexels.com/photos/18470963/pexels-photo-18470963/free-photo-of-a-sofa-in-a-living-room.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/133920/pexels-photo-133920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ],
+      "vip": true,
+      "type": "hotel",
+      "rating": 4.1,
+      "rooms": 84,
+      "availableRooms": 42,
+      "bedRoom": 2,
+      "squareMeter": 45,
+      "userName": "Tina Khidasheli",
+      "userId": "3f25731b-9f82-4e3a-a4c1-6f1e2d89366f"
+    },
+    {
+      "id": 6,
+      "name": "Hotel Rooms",
+      "location": "Zugdidi Suburbs",
+      "pricePerNight": 745,
+      "capacity": 2,
+      "amenities": {
+        "gym": true,
+        "restaurant": true,
+        "pool": true,
+        "balcony": true,
+        "kitchen": true,
+        "parking": true,
+        "gas": true,
+        "television": true,
+        "internet": true,
+        "hotWater": true
+      },
+      "photos": [
+        "https://images.pexels.com/photos/6970068/pexels-photo-6970068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/6903248/pexels-photo-6903248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/6316060/pexels-photo-6316060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/122244/pexels-photo-122244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ],
+      "vip": true,
+      "type": "hotel",
+      "rating": 5,
+      "rooms": 298,
+      "availableRooms": 256,
+      "bedRoom": 1,
+      "squareMeter": 85,
+      "userName": "Luka Gobechia",
+      "userId": "3f25731b-9f82-4e3a-a4c1-6f1e2d89366f"
+    },
+    {
+      "id": 7,
+      "name": "Hilton Comercials",
+      "location": "Vake",
+      "pricePerNight": 10000,
+      "capacity": 18,
+      "amenities": {
+        "gym": false,
+        "restaurant": false,
+        "pool": false,
+        "balcony": true,
+        "kitchen": true,
+        "parking": true,
+        "gas": true,
+        "television": false,
+        "internet": true,
+        "hotWater": true
+      },
+      "photos": [
+        "https://media.istockphoto.com/id/1410270664/tr/foto%C4%9Fraf/modern-style-office-with-exposed-concrete-floor-and-a-lot-of-plants.jpg?s=2048x2048&w=is&k=20&c=i3Qh3XtTAASTju6DerT6_tMKhqkggyJYLqbrpXA4DQk=",
+        "https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/6899398/pexels-photo-6899398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ],
+      "vip": true,
+      "type": "commercial",
+      "commercialType": "Office",
+      "areaInSquareFeet": 2690,
+      "squareMeter": 250,
+      "userName": "Nika Giorgobiani",
+      "userId": "3f25731b-9f82-4e3a-a4c1-6f1e2d89366f"
+    }
+  ],
+  "users": [
+    {
+      "email": "guka.mamada@gmail.com",
+      "password": "$2a$10$uDQigLupkYgEggBi3Bqz7.3Wbzaufu0.OzdcpuAZGavLykXMlEsqm",
+      "userName": "guka19",
+      "id": 1
     }
   ]
 }

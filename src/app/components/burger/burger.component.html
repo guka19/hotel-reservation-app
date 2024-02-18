@@ -6,7 +6,9 @@
       <li><a routerLink="/about"><i class="pi pi-question-circle"></i> {{ 'about' | translate }} </a></li>
       <div class="line"></div>
       <li class="user">
-          <p-button icon="pi pi-user" [label]="'user' | translate" severity="help"></p-button>
+          <a routerLink="/user-login">
+            <p-button icon="pi pi-user" [label]="'user' | translate" severity="help"></p-button>
+          </a>
       </li>
       <li>
         <div class="language">

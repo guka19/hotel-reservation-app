@@ -1,6 +1,6 @@
 <header>
     <div class="hotel-res">
-        <a href="">
+        <a href="/home">
             <img src="assets/header/hotel-res.svg" alt="hotel-res">
             <span>
                 HOTELRES.GE
@@ -53,13 +53,15 @@
                             <span class="p-inputgroup-addon">
                                 <i class="pi pi-lock"></i>
                             </span>
-                            <input pInputText [placeholder]=" 'password' | translate " formControlName="password" />
+                            <input pInputText type="password" [placeholder]=" 'password' | translate " formControlName="password" />
                         </div>
                         <p-button [label]=" 'login' | translate " severity="help"></p-button>
                     </form>
                 </div>
                 <span> {{ "or" | translate }} </span>
-                <p-button [label]=" 'createacc' | translate " severity="help" [text]="true"></p-button>
+                <a routerLink="/register">
+                    <p-button [label]=" 'createacc' | translate " severity="help" [text]="true" (click)="toggleSidebar()"></p-button>
+                </a>
             </div>
         </div>
     </div>

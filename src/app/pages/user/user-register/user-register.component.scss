@@ -1,0 +1,41 @@
+@import '../../../../styles.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+        padding: 50px;
+        border-radius: 20px;
+
+        span {
+            font-family: $poppins;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            .registered {
+                color: #333;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}

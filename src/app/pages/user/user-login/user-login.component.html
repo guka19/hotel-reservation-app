@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="form-container">
+        <span class="title"> {{ "signin" | translate }} </span>
+        <form [formGroup]="loginForm">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-envelope"></i>
+                </span>
+                <input pInputText [placeholder]=" 'email' | translate " formControlName="email" />
+            </div>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-lock"></i>
+                </span>
+                <input pInputText type="password" [placeholder]=" 'password' | translate " formControlName="password" />
+            </div>
+            <div class="submit-group">
+                <p-button [label]=" 'login' | translate " severity="help" (click)="login()"></p-button>
+            </div>
+            <a class="registered" routerLink="/register"> {{ 'notregistered' | translate }} </a>
+        </form>
+    </div>
+</div>

@@ -41,5 +41,17 @@
     "balcony": "Balcony",
     "restaurant": "Restaurant",
     "gym": "Gym",
-    "other-listings": "Check out other listings"
+    "other-listings": "Check out other listings",
+    "fname": "Firstname",
+    "lname": "Lastname",
+    "phonenum": "Phone Number",
+    "repeatpass": "Repeat Password",
+    "dateofbirth": "Date of birth",
+    "signupform": "Sign Up Form",
+    "signin": "Sign In",
+    "registered": "Already have an account? Login here",
+    "notregistered": "Don't have an account? Register here",
+    "regasuser": "Register as a user",
+    "regasrenter": "Register as a renter",
+    "chooseform": "Choose registration form"
 }

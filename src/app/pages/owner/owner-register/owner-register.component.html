@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="form-container">
+        <span class="title"> {{ "signupform" | translate }} </span>
+            <form [formGroup]="registerForm"> 
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-user"></i>
+                    </span>
+                    <input pInputText [placeholder]=" 'fname' | translate " formControlName="firstName" />
+                </div>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-user"></i>
+                    </span>
+                    <input pInputText [placeholder]=" 'lname' | translate " formControlName="lastName" />
+                </div>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-calendar-times"></i>
+                    </span>
+                    <input pInputText [placeholder]=" 'dateofbirth' | translate " formControlName="lastName" />
+                </div>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-phone"></i>
+                    </span>
+                    <input pInputText [placeholder]=" 'phonenum' | translate " formControlName="phoneNumber" />
+                </div>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-envelope"></i>
+                    </span>
+                    <input pInputText [placeholder]=" 'email' | translate " formControlName="email" />
+                </div>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-lock"></i>
+                    </span>
+                    <input pInputText type="password" [placeholder]=" 'password' | translate " formControlName="password" />
+                </div>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-replay"></i>
+                    </span>
+                    <input pInputText type="password" [placeholder]=" 'repeatpass' | translate " formControlName="repeatPassword" />
+                </div>
+                <div class="submit-group">
+                    <p-button [label]=" 'createacc' | translate " severity="help"></p-button>
+                </div>
+                <a class="registered" routerLink="/user-login"> {{ 'registered' | translate }} </a>
+            </form>
+    </div>
+</div>
