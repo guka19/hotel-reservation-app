@@ -1,0 +1,187 @@
+@import '../../../styles.scss';
+
+.container {    
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+
+    .gallery {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        background-color: #333;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 30% 10px 30%;
+        border-bottom: 0.08rem gray solid;
+
+        .main-info {
+            display: flex;
+            justify-content: start;
+            gap: 200px;
+            padding: 20px 0px;
+
+            .name {
+                font-family: $poppins;
+                font-size: 28px;
+                font-weight: 500;
+            }
+
+            .location {
+                font-family: $poppins;
+                text-decoration: underline;
+                font-size: 18px;
+            }
+
+            .fav {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 20px;
+                font-family: $poppins;
+                cursor: pointer;
+            }
+
+            .deal-info {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                
+                .price {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: start;
+                    gap: 50px;
+
+                    span {
+                        font-size: 20px;
+                    }
+    
+                    .currency {
+                        display: flex;
+                        align-items: center;
+                        border-radius: 20px;
+                        border: 0.06rem gray solid;
+        
+                        .currency-button {
+                            border: none;
+                            background-color: transparent;
+                            outline: none;
+                            border-radius: 20px;
+                            font-size: 20px;
+                            cursor: pointer;
+        
+                            &.active {
+                                background-color: $primary;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                
+                .space {
+                    
+                    span {
+                        font-family: $poppins;
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+        }
+
+        .user {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid gray;
+            padding: 10px 0;
+
+            img {
+                width: 80px;
+            }
+
+            .username {
+                font-family: $poppins;
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 12px;
+                border-radius: 20px;
+                border: $primary 2px solid;
+                color: $primary;
+                cursor: pointer;
+            }
+        }
+
+        .amenities {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            gap: 30px;
+
+            .amenity-title {
+                font-family: $poppins;
+                font-size: 22px;
+                font-weight: 500;
+            }
+
+            .amenity-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                .amenitie {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .other-listings {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        gap: 50px;
+
+        span {
+            font-family: $poppins;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .property-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+    }
+}

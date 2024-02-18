@@ -11,6 +11,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DividerModule } from 'primeng/divider';
+import { GalleriaModule } from 'primeng/galleria';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { BurgerComponent } from './components/burger/burger.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ImageSliderComponent } from './components/image-slider/image-slider.component';
 import { PropertyCardComponent } from './components/property-card/property-card.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PropertyPageComponent } from './pages/property-page/property-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { PropertyCardComponent } from './components/property-card/property-card.
     BurgerComponent,
     HomeComponent,
     ImageSliderComponent,
-    PropertyCardComponent
+    PropertyCardComponent,
+    FooterComponent,
+    PropertyPageComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { PropertyCardComponent } from './components/property-card/property-card.
     CheckboxModule,
     RadioButtonModule,
     HammerModule,
+    GalleriaModule,
     DividerModule,
     TranslateModule.forRoot({
       loader: {

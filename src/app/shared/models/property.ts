@@ -4,14 +4,25 @@ export interface Property {
     location: string;
     pricePerNight: number;
     capacity: number;
-    amenities: string[];
+    amenities: {
+      gym: boolean;
+      restaurant: boolean;
+      pool: boolean;
+      balcony: boolean;
+      kitchen: boolean;
+      parking: boolean;
+      gas: boolean;
+      television: boolean;
+      internet: boolean;
+      hotWater: boolean;
+    };
     photos: string[];
     rooms?: number;
     vip: boolean;
-    type: propertyType;
+    type: "hotel" | "cottage" | "apartment" | "commercial";
     bedRoom: number;
-    squareMeter: number; 
-}
+    squareMeter: number;
+  }
 
 export interface Apartment extends Property {
     hasKitchen: boolean;

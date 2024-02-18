@@ -13,4 +13,6 @@ export interface AllListing extends Property {
   commercialType?: string;
   areaInSquareFeet?: number;
   hasParking?: boolean;
+  userName: string;
+  userId: string;
 }

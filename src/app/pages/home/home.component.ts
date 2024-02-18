@@ -13,6 +13,8 @@ export class HomeComponent {
 
   vipProperties: AllListing[] = [];
 
+  responsiveOptions: any[] | undefined;
+
   cities: string[] = ["Tbilisi", "Batumi", "Borjomi", "Qutaisi", "Bakuriani", "Gudauri", "Borjomi", "Gori", "Zugdidi", "Telavi", "Yazbegi", "Svaneti"];
 
   images: Slide[] = [
@@ -43,6 +45,37 @@ export class HomeComponent {
     this.propertyService.getVipProperties().subscribe(data => {
       this.vipProperties = data;
     })
+
+      this.responsiveOptions = [
+        {
+            breakpoint: '1400px',
+            numVisible: 3,
+            numScroll: 3
+        },
+        {
+            breakpoint: '1220px',
+            numVisible: 2,
+            numScroll: 2
+        },
+        {
+            breakpoint: '1100px',
+            numVisible: 1,
+            numScroll: 1
+        }
+    ];
   }
 
+  getSeverity(status: string) {
+    switch (status) {
+        case 'INSTOCK':
+            return 'success';
+        case 'LOWSTOCK':
+            return 'warning';
+        case 'OUTOFSTOCK':
+            return 'danger';
+        default:
+          return true;
+    }
+}
+  
 }

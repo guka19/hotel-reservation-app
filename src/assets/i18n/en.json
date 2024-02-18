@@ -1,7 +1,7 @@
 {
     "user": "User",
     "favorites": "Favorites",
-    "hotels": "Hotels",
+    "hotels": "Listings",
     "about": "About",
     "dashboard": "Dashboard",
     "logorcreate": "Login or create account",
@@ -24,5 +24,22 @@
     "next": "Next",
     "prev": "Previous",
     "vip": "Vip Listings",
-    "m2": "M²"
+    "m2": "M²",
+    "rights": "ALL RIGHTS RESERVED®",
+    "send-message": "Send Message",
+    "area": "Area",
+    "addtofav": "Add to favorites",
+    "removefromfav": "Remove from favorites",
+    "amenities": "Amenities",
+    "gas": "Gas",
+    "tv": "Television",
+    "internet": "Internet",
+    "kitchen": "Kitchen",
+    "pool": "Pool",
+    "hot-water": "Hot water",
+    "parking": "Parking",
+    "balcony": "Balcony",
+    "restaurant": "Restaurant",
+    "gym": "Gym",
+    "other-listings": "Check out other listings"
 }

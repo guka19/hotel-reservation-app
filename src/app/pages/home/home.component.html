@@ -25,7 +25,11 @@
 </div>
 <div class="vip-listings">
     <span> <i class="pi pi-verified"></i> {{ 'vip' | translate }} </span>
-        <div class="card-container">
-            <app-property-card *ngFor="let property of vipProperties" [property]="property"></app-property-card>
+     <div class="card-container">
+        <div *ngFor="let property of vipProperties">
+            <a [routerLink]="['/pr', property.id]">
+                <app-property-card [property]="property"></app-property-card>
+            </a>
         </div>
+     </div>
 </div>

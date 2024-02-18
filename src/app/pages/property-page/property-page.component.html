@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="gallery">
+        <p-galleria [value]="property.photos" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item" style="width: 100%;" />
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item>
+                <div class="grid grid-nogutter justify-content-center">
+                    <img [src]="item" style="width: 100%;" />
+                </div>
+            </ng-template>
+        </p-galleria>
+    </div>
+    <div class="about">
+        <div class="main-info">
+            <div>
+                <span class="name">{{property.name}}</span>
+                <p class="location"> {{property.location}} </p>
+                <span class="fav" *ngIf="!favorite"> <i class="pi pi-heart" style="font-size: 22px;" (click)="toggleFavorite()"></i>{{ "addtofav" | translate }} </span>
+                <span class="fav" *ngIf="favorite"> <i class="pi pi-heart-fill" style="font-size: 22px;" (click)="toggleFavorite()"></i>{{ "removefromfav" | translate }} </span>
+            </div>
+            <div class="deal-info">
+                <div class="price">
+                    <span class="price" *ngIf="currency === 'gel' ">{{property.pricePerNight}}₾</span>
+                    <span class="price" *ngIf="currency === 'usd' ">{{(property.pricePerNight / 2.7).toFixed(2)}}$</span>
+                    <div class="currency">
+                    <button class="currency-button" [ngClass]="{ 'active': currency === 'usd' }" (click)="changetoUsd()">$</button>
+                    <button class="currency-button" [ngClass]="{ 'active': currency === 'gel' }" (click)="changeToGel()">₾</button>
+                    </div>
+                </div>
+                <div class="space">
+                    <span> {{ 'area' | translate }}: {{property.squareMeter}}{{ 'm2' | translate }} </span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="user">
+            <img src="https://www.svgrepo.com/show/452030/avatar-default.svg" alt="avatar">
+            <span class="username"> {{property.userName}} </span>
+            <section class="number">555 720 218</section>
+            <p-button icon="pi pi-comment" [label]=" 'send-message' | translate " severity="help"></p-button>
+        </div>
+        <div class="amenities">
+            <span class="amenity-title">{{ 'amenities' | translate }}</span>
+            <div class="amenity-list">
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.gas"><span class="material-symbols-outlined">gas_meter</span> {{ 'gas' | translate }} </p>
+                    <p *ngIf="!property.amenities.gas" style="text-decoration: line-through;"><span class="material-symbols-outlined">gas_meter</span> {{ 'gas' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.television"><span class="material-symbols-outlined">tv</span> {{ 'tv' | translate }} </p>
+                    <p *ngIf="!property.amenities.television" style="text-decoration: line-through;"><span class="material-symbols-outlined">tv</span> {{ 'tv' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.internet"><span class="material-symbols-outlined">language</span> {{ 'internet' | translate }} </p>
+                    <p *ngIf="!property.amenities.internet" style="text-decoration: line-through;"><span class="material-symbols-outlined">language</span> {{ 'internet' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.kitchen"><span class="material-symbols-outlined">soup_kitchen</span> {{ 'kitchen' | translate }} </p>
+                    <p *ngIf="!property.amenities.kitchen" style="text-decoration: line-through;"><span class="material-symbols-outlined">soup_kitchen</span> {{ 'kitchen' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.pool"><span class="material-symbols-outlined">pool</span> {{ 'pool' | translate }} </p>
+                    <p *ngIf="!property.amenities.pool" style="text-decoration: line-through;"><span class="material-symbols-outlined">pool</span> {{ 'pool' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.hotWater"><span class="material-symbols-outlined">water_drop</span> {{ 'hot-water' | translate }} </p>
+                    <p *ngIf="!property.amenities.hotWater" style="text-decoration: line-through;"><span class="material-symbols-outlined">water_drop</span> {{ 'hot-water' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.parking"><span class="material-symbols-outlined">local_parking</span> {{ 'parking' | translate }} </p>
+                    <p *ngIf="!property.amenities.parking" style="text-decoration: line-through;"><span class="material-symbols-outlined">local_parking</span> {{ 'parking' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.balcony"><span class="material-symbols-outlined">balcony</span> {{ 'balcony' | translate }} </p>
+                    <p *ngIf="!property.amenities.balcony" style="text-decoration: line-through;"><span class="material-symbols-outlined">balcony</span> {{ 'balcony' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.restaurant"><span class="material-symbols-outlined">restaurant</span> {{ 'restaurant' | translate }} </p>
+                    <p *ngIf="!property.amenities.restaurant" style="text-decoration: line-through;"><span class="material-symbols-outlined">restaurant</span> {{ 'restaurant' | translate }} </p>
+                </div>
+                <div class="amenitie">
+                    <p *ngIf="property.amenities.gym"><span class="material-symbols-outlined">exercise</span> {{ 'gym' | translate }} </p>
+                    <p *ngIf="!property.amenities.gym" style="text-decoration: line-through;"><span class="material-symbols-outlined">exercise</span> {{ 'gym' | translate }} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="other-listings">
+        <span>{{ 'other-listings' | translate }}</span>
+        <div class="property-container">
+            <app-property-card *ngFor="let property of properties" [property]="property"></app-property-card>
+        </div>
+    </div>
+</div>

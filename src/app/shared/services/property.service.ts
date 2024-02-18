@@ -20,5 +20,9 @@ export class PropertyService {
     );
   }
 
+  getProperty(propertyId: string): Observable<AllListing> {
+    return this.http.get<AllListing>(`${this.apiUrl}/${propertyId}`);
+  }
+
   constructor(private http: HttpClient) { }
 }
