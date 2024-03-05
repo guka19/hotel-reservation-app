@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/shared/services/user.service';
+
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-owner-register',
@@ -23,7 +27,7 @@ export class OwnerRegisterComponent {
   registerForm = this.fb.group({
     firstName: ["", [Validators.required, Validators.minLength(2)]],
     lastName: ["", [Validators.required, Validators.minLength(2)]],
-    dateOfBirth: [null, [Validators.required]],
+    dateOfBirth: ["", [Validators.required]],
     phoneNumber: ["", [Validators.required, this.phoneNumberValidator()]],
     email: ["", [Validators.required, Validators.email]],
     password: ["", [Validators.required, Validators.minLength(8)]],
@@ -32,5 +36,34 @@ export class OwnerRegisterComponent {
     Validators: this.passwordMatchValidator()
   });
 
-  constructor(private fb: FormBuilder) {}
+  register() {
+
+    console.log("zangi");
+     
+    if (this.registerForm.valid) {
+      console.log("zangexa");
+      const value = this.registerForm.value;
+
+      this.userService.register({
+        id: uuidv4(),
+        firstName: value.firstName!,
+        lastName: value.lastName!,
+        dateOfBirth: value.dateOfBirth!,
+        email: value.email!,
+        phoneNumber: value.phoneNumber!,
+        password: value.password!,
+        role: "renter"
+      }).subscribe(
+        (response) => {
+          alert("Registered Successfully!");
+          this.router.navigate(['/user-login']);
+        },
+        (error) => {
+          alert(error.message);
+        }
+      )
+    }
+  }
+
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {}
 }

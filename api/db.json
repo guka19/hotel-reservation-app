@@ -227,6 +227,39 @@
       "squareMeter": 250,
       "userName": "Nika Giorgobiani",
       "userId": "3f25731b-9f82-4e3a-a4c1-6f1e2d89366f"
+    },
+    {
+      "id": 7,
+      "name": "Tbilisi Towers",
+      "location": "Vake",
+      "pricePerNight": 10000,
+      "capacity": 18,
+      "amenities": {
+        "gym": false,
+        "restaurant": false,
+        "pool": false,
+        "balcony": true,
+        "kitchen": true,
+        "parking": true,
+        "gas": true,
+        "television": false,
+        "internet": true,
+        "hotWater": true
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://media.istockphoto.com/id/104731717/photo/luxury-resort.jpg?s=2048x2048&w=is&k=20&c=yhDN3-AsSRzQWjgRmXIvuMRC1GcNpWdqNzKF7ij8W4k=",
+        "https://as1.ftcdn.net/v2/jpg/02/94/19/40/1000_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg",
+        "https://as1.ftcdn.net/v2/jpg/02/71/08/28/1000_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg",
+        "https://as1.ftcdn.net/v2/jpg/06/19/00/08/1000_F_619000872_AxiwLsfQqRHMkNxAbN4l5wg1MsPgBsmo.jpg"
+      ],
+      "vip": true,
+      "type": "commercial",
+      "commercialType": "Office",
+      "areaInSquareFeet": 2690,
+      "squareMeter": 250,
+      "userName": "Nino Gogoladze",
+      "userId": "3f25731b-9f82-4e3a-a4c1-6f1e2d89366f"
     }
   ],
   "users": [
@@ -234,6 +267,43 @@
       "email": "guka.mamada@gmail.com",
       "password": "$2a$10$uDQigLupkYgEggBi3Bqz7.3Wbzaufu0.OzdcpuAZGavLykXMlEsqm",
       "userName": "guka19",
+      "id": 1,
+      "role": "admin"
+    },
+    {
+      "email": "guka@gmail.com",
+      "password": "$2a$10$ZcJEcBTn/kcSON/D5KZbEee0mCFzWnNq//AakqVcF18addEPqvm3S",
+      "id": "a376cd59-acf6-44e1-8d79-e6579e9f0882",
+      "firstName": "guka",
+      "lastName": "mamada",
+      "phoneNumber": "597720218",
+      "role": "client"
+    },
+    {
+      "email": "chiora@gmail.com",
+      "password": "$2a$10$RI1rOVFaJpXKatT11y8TM.4Jzxrpa6ZkS/DVs8zMCyJ.KPYKC2LKC",
+      "id": "8144a79d-6555-4a2d-a8f0-a8807d1301b3",
+      "firstName": "chiorac",
+      "lastName": "chioria",
+      "dateOfBirth": "1995-07-09",
+      "phoneNumber": "597111111",
+      "role": "renter"
+    },
+    {
+      "email": "fthfthhftr@GMAIL.COM",
+      "password": "$2a$10$MKXbzUDNRQgdjAydw2pUheaeN8zVpLRusclpXkYahpHnoZ/lh96re",
+      "id": "275478e8-229d-406c-a50f-3d18834f4e13",
+      "firstName": "tr",
+      "lastName": "aki",
+      "dateOfBirth": "1901-03-04",
+      "phoneNumber": "597201944",
+      "role": "renter"
+    }
+  ],
+  "favorites": [
+    {
+      "userId": "a376cd59-acf6-44e1-8d79-e6579e9f0882",
+      "listingId": 2,
       "id": 1
     }
   ]

@@ -53,5 +53,6 @@
     "notregistered": "Don't have an account? Register here",
     "regasuser": "Register as a user",
     "regasrenter": "Register as a renter",
-    "chooseform": "Choose registration form"
+    "chooseform": "Choose registration form",
+    "signout": "Logout"
 }

@@ -1,6 +1,6 @@
 <header>
     <div class="hotel-res">
-        <a href="/home">
+        <a routerLink="/home">
             <img src="assets/header/hotel-res.svg" alt="hotel-res">
             <span>
                 HOTELRES.GE
@@ -25,7 +25,9 @@
             </ul>
         </nav>
         <div class="user">
-            <p-button icon="pi pi-user" [label]=" 'user' | translate " severity="help" (click)="toggleSidebar()"></p-button>
+            <p-button *ngIf="!isLoggedIn" icon="pi pi-user" [label]=" 'user' | translate " severity="help" (click)="toggleSidebar()"></p-button>
+            <p-button *ngIf="isLoggedIn" icon="pi pi-user" [label]="user.firstName + ' ' + user.lastName" severity="help"></p-button>
+            <p-button *ngIf="isLoggedIn" icon="pi pi-sign-out" [label]=" 'signout' | translate " severity="help" [text]="true" (click)="logOut()"></p-button>
             <div class="language">
                 <button [class.active]="activeLanguage === 'en'" (click)="switchLanguage('en')">EN</button>
                 <button [class.active]="activeLanguage === 'ge'" (click)="switchLanguage('ge')">GE</button>
@@ -55,7 +57,8 @@
                             </span>
                             <input pInputText type="password" [placeholder]=" 'password' | translate " formControlName="password" />
                         </div>
-                        <p-button [label]=" 'login' | translate " severity="help"></p-button>
+                        <span class="login-error"> {{errorMsg}} </span>
+                        <p-button [label]=" 'login' | translate " severity="help" (click)="login()"></p-button>
                     </form>
                 </div>
                 <span> {{ "or" | translate }} </span>

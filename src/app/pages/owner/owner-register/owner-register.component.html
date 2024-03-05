@@ -18,7 +18,7 @@
                     <span class="p-inputgroup-addon">
                         <i class="pi pi-calendar-times"></i>
                     </span>
-                    <input pInputText [placeholder]=" 'dateofbirth' | translate " formControlName="lastName" />
+                    <input pInputText type="date" [placeholder]=" 'dateofbirth' | translate " formControlName="dateOfBirth" />
                 </div>
                 <div class="p-inputgroup">
                     <span class="p-inputgroup-addon">
@@ -45,9 +45,10 @@
                     <input pInputText type="password" [placeholder]=" 'repeatpass' | translate " formControlName="repeatPassword" />
                 </div>
                 <div class="submit-group">
-                    <p-button [label]=" 'createacc' | translate " severity="help"></p-button>
+                    <p-button [label]=" 'createacc' | translate " severity="help" (click)="register()"></p-button>
                 </div>
                 <a class="registered" routerLink="/user-login"> {{ 'registered' | translate }} </a>
             </form>
+            <span>  </span>
     </div>
 </div>

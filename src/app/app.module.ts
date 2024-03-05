@@ -26,6 +26,8 @@ import { OwnerRegisterComponent } from './pages/owner/owner-register/owner-regis
 import { UserRegisterComponent } from './pages/user/user-register/user-register.component';
 import { UserLoginComponent } from './pages/user/user-login/user-login.component';
 import { DefaultRegisterComponent } from './pages/default-register/default-register.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { RenterDashboardComponent } from './pages/renter-dashboard/renter-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { DefaultRegisterComponent } from './pages/default-register/default-regis
     UserRegisterComponent,
     UserLoginComponent,
     DefaultRegisterComponent,
+    UserDashboardComponent,
+    RenterDashboardComponent,
   ],
   imports: [
     BrowserModule,

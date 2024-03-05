@@ -6,6 +6,8 @@ import { OwnerRegisterComponent } from './pages/owner/owner-register/owner-regis
 import { UserRegisterComponent } from './pages/user/user-register/user-register.component';
 import { UserLoginComponent } from './pages/user/user-login/user-login.component';
 import { DefaultRegisterComponent } from './pages/default-register/default-register.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { RenterDashboardComponent } from './pages/renter-dashboard/renter-dashboard.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -14,7 +16,9 @@ const routes: Routes = [
   { path: "renter-register", component: OwnerRegisterComponent },
   { path: "user-register", component: UserRegisterComponent },
   { path: "user-login", component: UserLoginComponent },
-  { path: "register", component: DefaultRegisterComponent }
+  { path: "register", component: DefaultRegisterComponent },
+  { path: "user-dashboard", component: UserDashboardComponent },
+  { path: "renter-dashboard", component: RenterDashboardComponent }
 ];
 
 @NgModule({

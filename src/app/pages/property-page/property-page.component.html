@@ -16,8 +16,8 @@
             <div>
                 <span class="name">{{property.name}}</span>
                 <p class="location"> {{property.location}} </p>
-                <span class="fav" *ngIf="!favorite"> <i class="pi pi-heart" style="font-size: 22px;" (click)="toggleFavorite()"></i>{{ "addtofav" | translate }} </span>
-                <span class="fav" *ngIf="favorite"> <i class="pi pi-heart-fill" style="font-size: 22px;" (click)="toggleFavorite()"></i>{{ "removefromfav" | translate }} </span>
+                <p-button [label]=" 'addtofav' | translate " severity="help" icon="pi pi-heart" *ngIf="!isFavorite" (click)="addFavorites()"></p-button>
+                <p-button [label]=" 'removefromfav' | translate " severity="help" icon="pi pi-heart-fill" *ngIf="isFavorite" (click)="addFavorites()"></p-button>
             </div>
             <div class="deal-info">
                 <div class="price">
@@ -30,7 +30,6 @@
                 </div>
                 <div class="space">
                     <span> {{ 'area' | translate }}: {{property.squareMeter}}{{ 'm2' | translate }} </span>
-                    
                 </div>
             </div>
         </div>

@@ -6,4 +6,5 @@ export interface Owner {
     dateOfBirth: Date;
     email: string;
     password: string;
+    role: string;
 }

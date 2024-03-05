@@ -14,6 +14,7 @@
                 </span>
                 <input pInputText type="password" [placeholder]=" 'password' | translate " formControlName="password" />
             </div>
+            <span class="login-error"> {{ errorMsg }} </span>
             <div class="submit-group">
                 <p-button [label]=" 'login' | translate " severity="help" (click)="login()"></p-button>
             </div>

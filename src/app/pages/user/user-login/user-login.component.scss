@@ -37,5 +37,12 @@
                 }
             }
         }
+
+        .login-error {
+            font-weight: 400;
+            color: red;
+            font-family: $poppins;
+            font-size: 16px;
+        }
     }
 }
